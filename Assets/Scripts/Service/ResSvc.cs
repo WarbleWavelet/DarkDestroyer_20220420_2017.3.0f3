@@ -6,16 +6,30 @@
 	功能：资源服务
 *****************************************************/
 
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ResSvc : MonoBehaviour 
 {
+
+
+
+    public static ResSvc Instance;
+
+
     /// <summary>
     /// 初始化服务
     /// </summary>
     public void InitSvc()
     {
+        Instance = this;
         Debug.Log("Init Res");
-
     }
+
+    public void AsyncLoadScene(string sceneName)
+    {
+        SceneManager.LoadSceneAsync(sceneName);
+    }
+
 }

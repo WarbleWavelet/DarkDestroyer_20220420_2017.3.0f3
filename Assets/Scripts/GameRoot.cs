@@ -10,8 +10,24 @@ using UnityEngine;
 
 public class GameRoot : MonoBehaviour 
 {
+
+    #region 单例
+
+    public static GameRoot Instance;
+
+    void Awake()
+    {
+        Instance = this;
+    }
+
+    #endregion
+
+    #region 登录
+    public LoadingWnd loadingWnd;
+    #endregion
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         Debug.Log("GameStart");
 
         Init();

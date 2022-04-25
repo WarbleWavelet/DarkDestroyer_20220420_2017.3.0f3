@@ -19,7 +19,8 @@ public class LoginSys : MonoBehaviour
     /// 进入登录场景
     /// </summary>
     public void EnterLogin()
-    { 
-    
+    {
+        GameRoot.Instance.loadingWnd.gameObject.SetActive(true);
+        ResSvc.Instance.AsyncLoadScene(Constants.sceneLogin);
     }
 }

@@ -414,6 +414,10 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: -0.05393982
       objectReference: {fileID: 0}
+    - target: {fileID: 1878534683763150, guid: 901cbd01575f5ac4081fd4593eb7c9b9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901cbd01575f5ac4081fd4593eb7c9b9, type: 2}
   m_IsPrefabParent: 0
@@ -656,6 +660,10 @@ Prefab:
       propertyPath: m_Animation
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1449879822023318, guid: ecda34605916c65489252857a94c21ae, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecda34605916c65489252857a94c21ae, type: 2}
   m_IsPrefabParent: 0
@@ -724,6 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a144b92c192259a4b8c29d8a87b2a985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingWnd: {fileID: 1741441387}
 --- !u!224 &1533266627 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224620502452558256, guid: 901cbd01575f5ac4081fd4593eb7c9b9,
@@ -746,7 +755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1734545389
 RectTransform:
   m_ObjectHideFlags: 0
@@ -826,6 +835,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1741441386 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1878534683763150, guid: 901cbd01575f5ac4081fd4593eb7c9b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 624761007}
+--- !u!114 &1741441387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741441386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a75b7c76c8cc1fa449048037d87c2f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1842509711 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224260288584090732, guid: bc1fbf77f4b6d2545b191027a079df07,
