@@ -42,8 +42,11 @@ public class ResSvc : MonoBehaviour
     /// 加载场景
     /// </summary>
     /// <param name="sceneName"></param>
-    public void AsyncLoadScene(string sceneName)
+    public void AsyncLoadScene(string sceneName,Action loaded)
     {
+        GameRoot.Instance.loadingWnd.gameObject.SetActive(true);
+        GameRoot.Instance.loadingWnd.InitWnd();
+
         AsyncOperation sceneAsync = SceneManager.LoadSceneAsync(sceneName);
 
         prgCB = () =>
@@ -54,6 +57,11 @@ public class ResSvc : MonoBehaviour
 
             if (val == 1)
             {
+                if (loaded != null)
+                { 
+                    loaded();
+                }
+
                 sceneAsync = null;
                 prgCB = null;
                 loadingWnd.gameObject.SetActive(false);

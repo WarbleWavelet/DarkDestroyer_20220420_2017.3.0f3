@@ -10,8 +10,21 @@ using UnityEngine;
 
 public class LoginSys : MonoBehaviour 
 {
+
+    public LoginWnd loginWnd;
+
+    public static LoginSys Instance;
+
+
+
+
+    void Start()
+    {
+        loginWnd = transform.Find("Canvas/LoginWnd").GetComponent<LoginWnd>();
+    }
     public void InitSys()
     {
+        Instance = this;
         Debug.Log("Init Login");
     }
 
@@ -20,8 +33,15 @@ public class LoginSys : MonoBehaviour
     /// </summary>
     public void EnterLogin()
     {
-        GameRoot.Instance.loadingWnd.gameObject.SetActive(true);
-        GameRoot.Instance.loadingWnd.InitWnd();
-        ResSvc.Instance.AsyncLoadScene(Constants.sceneLogin);
+
+        ResSvc.Instance.AsyncLoadScene(Constants.sceneLogin, () =>{ OpenLoginWnd(); });
+    }
+    /// <summary>
+    /// 打开登录窗口
+    /// </summary>
+    public void OpenLoginWnd()
+    {
+        loginWnd.gameObject.SetActive(true);
+        loginWnd.InitWnd();
     }
 }
