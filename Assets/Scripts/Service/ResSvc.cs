@@ -6,16 +6,26 @@
 	功能：资源服务
 *****************************************************/
 
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ResSvc : MonoBehaviour 
 {
-
-
-
     public static ResSvc Instance;
+    /// <summary>不停查询进度</summary>
+    Action prgCB;
+
+    void Update()
+    {
+        if (prgCB != null)
+        {
+
+            prgCB();
+        }
+
+    }
 
 
     /// <summary>
@@ -27,9 +37,31 @@ public class ResSvc : MonoBehaviour
         Debug.Log("Init Res");
     }
 
+
+    /// <summary>
+    /// 加载场景
+    /// </summary>
+    /// <param name="sceneName"></param>
     public void AsyncLoadScene(string sceneName)
     {
-        SceneManager.LoadSceneAsync(sceneName);
+        AsyncOperation sceneAsync = SceneManager.LoadSceneAsync(sceneName);
+
+        prgCB = () =>
+        {
+            float val = sceneAsync.progress;
+            LoadingWnd loadingWnd = GameRoot.Instance.loadingWnd;
+            loadingWnd.SetProgress(val);
+
+            if (val == 1)
+            {
+                sceneAsync = null;
+                prgCB = null;
+                loadingWnd.gameObject.SetActive(false);
+            }
+
+        };        
     }
+
+
 
 }

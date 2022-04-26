@@ -21,6 +21,7 @@ public class LoginSys : MonoBehaviour
     public void EnterLogin()
     {
         GameRoot.Instance.loadingWnd.gameObject.SetActive(true);
+        GameRoot.Instance.loadingWnd.InitWnd();
         ResSvc.Instance.AsyncLoadScene(Constants.sceneLogin);
     }
 }
