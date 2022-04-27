@@ -1002,6 +1002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5faa930a1e913454d8dcef0f59297c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resSvc: {fileID: 1332992442}
+  audioSvc: {fileID: 1332992445}
   loginWnd: {fileID: 1545980948}
 --- !u!114 &1332992444
 MonoBehaviour:
@@ -1062,6 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resSvc: {fileID: 1332992442}
+  audioSvc: {fileID: 1332992445}
   iptAcct: {fileID: 1027960469}
   iptPass: {fileID: 451579405}
   btnNotice: {fileID: 2088108331}
@@ -1180,6 +1183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resSvc: {fileID: 1332992442}
+  audioSvc: {fileID: 1332992445}
   textTips: {fileID: 1263393557}
   textPrg: {fileID: 1522037357}
   imageFG: {fileID: 1190705858}

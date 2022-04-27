@@ -8,7 +8,7 @@
 
 using UnityEngine;
 
-public class LoginSys : MonoBehaviour 
+public class LoginSys : SystemRoot
 {
 
     public LoginWnd loginWnd;
@@ -22,8 +22,9 @@ public class LoginSys : MonoBehaviour
     {
         loginWnd = transform.Find("Canvas/LoginWnd").GetComponent<LoginWnd>();
     }
-    public void InitSys()
+   public override void InitSys()
     {
+        base.InitSys();
         Instance = this;
         Debug.Log("Init Login");
     }
@@ -34,7 +35,7 @@ public class LoginSys : MonoBehaviour
     public void EnterLogin()
     {
 
-        ResSvc.Instance.AsyncLoadScene(Constants.sceneLogin, () =>{ OpenLoginWnd(); });
+        resSvc.AsyncLoadScene(Constants.sceneLogin, () =>{ OpenLoginWnd(); });
     }
     /// <summary>
     /// 打开登录窗口
@@ -42,6 +43,7 @@ public class LoginSys : MonoBehaviour
     public void OpenLoginWnd()
     {
         loginWnd.SetWndState();
-        AudioSvc.Instance.PlayBg (Constants.BGLogin);
+        
+        audioSvc.PlayBg (Constants.BGLogin);
     }
 }

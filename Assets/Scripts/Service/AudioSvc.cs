@@ -31,11 +31,9 @@ public class AudioSvc : MonoBehaviour
     /// <param name="isLoop"></param>
     public void PlayBg(string name, bool isLoop = true)
     {
-        Debug.Log("1");
         AudioClip audio = ResSvc.Instance.LoadAudio("ResAudio/" + name, true);
         if (bgAudio.clip == null || bgAudio.clip.name != name)
         {
-            Debug.Log("2");
             bgAudio.clip = audio;
             bgAudio.loop = isLoop;
             bgAudio.Play();

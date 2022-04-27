@@ -34,18 +34,22 @@ public class GameRoot : MonoBehaviour
     }
 
     /// <summary>
-    /// 控制初始化模块的顺序
+    /// 控制初始化模块的顺序(乱了就空指针错误)
     /// </summary>
     void Init()
     {
         ResSvc res = GetComponent<ResSvc>();
         res.InitSvc();
+        AudioSvc audio = GetComponent<AudioSvc>();
+        audio.InitSvc();
+        
 
         LoginSys login=GetComponent<LoginSys>();
         login.InitSys();
-        login.EnterLogin();
+        
 
-        AudioSvc audio = GetComponent<AudioSvc>();
-        audio.InitSvc();
+
+
+        login.EnterLogin();
     }
 }
