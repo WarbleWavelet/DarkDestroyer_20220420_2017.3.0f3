@@ -9,7 +9,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadingWnd : MonoBehaviour 
+public class LoadingWnd : WindowRoot
 {
     public Text textTips;
     public Text textPrg;
@@ -30,10 +30,11 @@ public class LoadingWnd : MonoBehaviour
     /// <summary>
     /// 初始进度窗口
     /// </summary>
-    public void InitWnd()
+    protected override void InitWnd()
     {
-        textTips.text="这是一条Tips";
-        textPrg.text="0.0%";
+        base.InitWnd();
+        SetText(textTips,"这是一条Tips");
+        SetText(textPrg, "0.0%");
         imageFG.fillAmount=0;
         imagePoint.transform.localPosition=new Vector3(-607.488f,0,0);//value=0时
 
@@ -45,7 +46,7 @@ public class LoadingWnd : MonoBehaviour
         //ForTooFastToSee(prg);
         //
         //textPrg.text = (int)prg*100+"%";//原来这样写，但是应该90%时显示为0%
-        textPrg.text = prg*100+"%";    
+        SetText(textPrg, prg*100+"%");
         imageFG.fillAmount = prg;
         imagePoint.transform.localPosition = new Vector3(-607.488f + prg*(607.488f*2), 0, 0);//value=0时
     }

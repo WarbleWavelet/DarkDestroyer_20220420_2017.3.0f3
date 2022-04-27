@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LoadingWnd" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAgAAAACAAAAAAAAECAAAAAAAAAAAQAAAAAABACAA=</HashCode>
+      <FileName>Assets\Scripts\UIWindow\LoadingWnd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoginWnd" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgACAAAAAAAAECAIAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIWindow\LoginWnd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowRoot" Collapsed="true">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAABAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\WindowRoot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoginSys" Collapsed="true">
+    <Position X="9" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAEQAAAAAAAAAAAAEQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\System\LoginSys.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResSvc" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIgAAAAAAAAAAAAAAAAAAAAAAAAQAAEAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Service\ResSvc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Constants" Collapsed="true">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Common\Constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameRoot" Collapsed="true">
+    <Position X="9.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAQAAAQAACAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameRoot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

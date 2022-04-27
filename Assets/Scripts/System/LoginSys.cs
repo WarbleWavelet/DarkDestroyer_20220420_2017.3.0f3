@@ -42,6 +42,6 @@ public class LoginSys : MonoBehaviour
     public void OpenLoginWnd()
     {
         loginWnd.gameObject.SetActive(true);
-        loginWnd.InitWnd();
+        loginWnd.SetWndState();
     }
 }
