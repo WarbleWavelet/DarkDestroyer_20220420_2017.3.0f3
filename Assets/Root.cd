@@ -17,7 +17,7 @@
   <Class Name="WindowRoot" Collapsed="true">
     <Position X="3.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAABAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAQAAAAIEAABAAAAAAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>Assets\Scripts\WindowRoot.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -29,16 +29,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ResSvc" Collapsed="true">
-    <Position X="7.25" Y="2" Width="1.5" />
+    <Position X="6.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAIgAAAAAAAAAAAAAAAAAAAAAAAAQAAEAAAAAAA=</HashCode>
+      <HashCode>AAQAAAIgAAAAAAAAAAAAAAACAAAAAAAAQAAEAAAACAA=</HashCode>
       <FileName>Assets\Scripts\Service\ResSvc.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Constants" Collapsed="true">
     <Position X="7.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>Assets\Scripts\Common\Constants.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -44,5 +44,8 @@ public class GameRoot : MonoBehaviour
         LoginSys login=GetComponent<LoginSys>();
         login.InitSys();
         login.EnterLogin();
+
+        AudioSvc audio = GetComponent<AudioSvc>();
+        audio.InitSvc();
     }
 }

@@ -8,6 +8,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,8 @@ public class ResSvc : MonoBehaviour
     public static ResSvc Instance;
     /// <summary>不停查询进度</summary>
     Action prgCB;
+
+    Dictionary<string, AudioClip> adDict = new Dictionary<string, AudioClip>();
 
     void Update()
     {
@@ -69,6 +72,29 @@ public class ResSvc : MonoBehaviour
         };        
     }
 
+    /// <summary>
+    /// 加载声音
+    /// </summary>
+    /// <param name="path"></param>
+    /// <param name="cache">缓存不？</param>
+    /// <returns></returns>
+
+    public AudioClip LoadAudio(string path, bool cache = false)
+    {
+        AudioClip au = null;
+        if (adDict.TryGetValue(path, out au) == false)
+        {
+            au = Resources.Load<AudioClip>(path);
+            if (cache)
+            {
+                adDict.Add(path,au);
+            }
+        }
+
+  
+      
+        return au;
+    }
 
 
 }

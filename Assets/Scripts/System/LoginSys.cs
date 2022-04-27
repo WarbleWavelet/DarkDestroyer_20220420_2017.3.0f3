@@ -41,7 +41,7 @@ public class LoginSys : MonoBehaviour
     /// </summary>
     public void OpenLoginWnd()
     {
-        loginWnd.gameObject.SetActive(true);
         loginWnd.SetWndState();
+        AudioSvc.Instance.PlayBg (Constants.BGLogin);
     }
 }
