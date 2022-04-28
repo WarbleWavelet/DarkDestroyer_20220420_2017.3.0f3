@@ -30,7 +30,7 @@ public class GameRoot : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         Debug.Log("GameStart");
-
+        ClearUIRoot();
         Init();
     }
 
@@ -52,9 +52,25 @@ public class GameRoot : MonoBehaviour
 
         login.EnterLogin();
 
-        dynamicWnd.AddTips("Test"); 
-        dynamicWnd.AddTips("Test2"); 
+
     }
 
+    public static void AddTips(string tips)
+    {
+       Instance.dynamicWnd.AddTips(tips);
+    }
 
+    /// <summary>
+    /// 从注册到登录
+    /// </summary>
+    void ClearUIRoot()
+    {
+        Transform canvas = transform.Find("Canvas");
+        for (int i = 0; i < canvas.childCount; i++)
+        {
+            canvas.GetChild(i).gameObject.SetActive(false);
+        }
+
+        dynamicWnd.SetWndState();
+    }
 }

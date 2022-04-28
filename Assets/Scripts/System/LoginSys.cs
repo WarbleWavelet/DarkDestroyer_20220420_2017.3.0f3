@@ -36,6 +36,14 @@ public class LoginSys : SystemRoot
     {
 
         resSvc.AsyncLoadScene(Constants.sceneLogin, () =>{ OpenLoginWnd(); });
+        GameRoot.AddTips("注");
+        GameRoot.AddTips("注册");
+        GameRoot.AddTips("注册系");
+        GameRoot.AddTips("注册系统");
+        GameRoot.AddTips("注册系统加");
+        GameRoot.AddTips("注册系统加载");
+        GameRoot.AddTips("注册系统加载完");
+        GameRoot.AddTips("注册系统加载完成");
     }
     /// <summary>
     /// 打开登录窗口

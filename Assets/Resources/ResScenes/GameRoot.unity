@@ -824,7 +824,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1003954691704988, guid: 0833f21d00de93641a89c1b637379f71, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0833f21d00de93641a89c1b637379f71, type: 2}
@@ -941,14 +941,14 @@ Prefab:
         type: 2}
       propertyPath: m_Animation
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7400000, guid: 74e000526ec986548a6574b7889c3e45, type: 2}
     - target: {fileID: 1449879822023318, guid: ecda34605916c65489252857a94c21ae, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1787008294642014, guid: ecda34605916c65489252857a94c21ae, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecda34605916c65489252857a94c21ae, type: 2}
@@ -1105,6 +1105,7 @@ MonoBehaviour:
   audioSvc: {fileID: 1332992445}
   tipsAni: {fileID: 871511010}
   txtTips: {fileID: 871511011}
+  isTipsShow: 0
 --- !u!1 &1734545388
 GameObject:
   m_ObjectHideFlags: 0

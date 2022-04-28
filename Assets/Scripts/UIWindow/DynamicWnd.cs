@@ -76,7 +76,7 @@ public class DynamicWnd : WindowRoot
 
     public void AddTips(string tips)
     {
-、        lock (tipsQuene)
+        lock (tipsQuene)
         {
             tipsQuene.Enqueue(tips);
 
