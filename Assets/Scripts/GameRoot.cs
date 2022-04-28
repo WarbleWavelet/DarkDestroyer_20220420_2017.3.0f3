@@ -24,6 +24,7 @@ public class GameRoot : MonoBehaviour
 
     #region 登录
     public LoadingWnd loadingWnd;
+    public DynamicWnd dynamicWnd;
     #endregion
     void Start()
     {
@@ -42,14 +43,18 @@ public class GameRoot : MonoBehaviour
         res.InitSvc();
         AudioSvc audio = GetComponent<AudioSvc>();
         audio.InitSvc();
-        
 
         LoginSys login=GetComponent<LoginSys>();
         login.InitSys();
         
-
+        dynamicWnd.Init();
 
 
         login.EnterLogin();
+
+        dynamicWnd.AddTips("Test"); 
+        dynamicWnd.AddTips("Test2"); 
     }
+
+
 }
