@@ -217,7 +217,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1665191769302598, guid: bc1fbf77f4b6d2545b191027a079df07, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc1fbf77f4b6d2545b191027a079df07, type: 2}
@@ -824,7 +824,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1003954691704988, guid: 0833f21d00de93641a89c1b637379f71, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0833f21d00de93641a89c1b637379f71, type: 2}
@@ -953,6 +953,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecda34605916c65489252857a94c21ae, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1248399361 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1003954691704988, guid: 0833f21d00de93641a89c1b637379f71,
+    type: 2}
+  m_PrefabInternal: {fileID: 1191069269}
+--- !u!114 &1248399362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1248399361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eaa542d7796f444cbc2db9cdaaed175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resSvc: {fileID: 1332992442}
+  audioSvc: {fileID: 1332992445}
 --- !u!114 &1263393557 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114144403477703086, guid: 901cbd01575f5ac4081fd4593eb7c9b9,
@@ -1020,6 +1038,7 @@ MonoBehaviour:
   resSvc: {fileID: 1332992442}
   audioSvc: {fileID: 1332992445}
   loginWnd: {fileID: 1545980948}
+  createWnd: {fileID: 1248399362}
 --- !u!114 &1332992444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,6 +1104,7 @@ MonoBehaviour:
   iptPass: {fileID: 451579405}
   btnNotice: {fileID: 2088108331}
   btnEnter: {fileID: 1531876462}
+  createWnd: {fileID: 1248399362}
 --- !u!1 &1732039155 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1449879822023318, guid: ecda34605916c65489252857a94c21ae,

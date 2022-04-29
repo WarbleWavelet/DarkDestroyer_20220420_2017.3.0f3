@@ -17,6 +17,8 @@ public class LoginWnd : WindowRoot
     public Button btnNotice;
     public Button btnEnter;
 
+    public CreateWnd createWnd;
+
 
      void Start()
     {
@@ -24,6 +26,9 @@ public class LoginWnd : WindowRoot
         iptAcct = transform.Find("rightPin/iptbg1/iptAcct").GetComponent<InputField>();
         iptPass = transform.Find("rightPin/iptbg2/iptPass").GetComponent<InputField>();
         btnEnter = transform.Find("rightPin/btnEnter").GetComponent<Button>();
+
+        btnEnter.onClick.AddListener(ClickEnterBtn);
+        btnNotice.onClick.AddListener(ClickNoticeBtn);
 
     }
     protected override void InitWnd()
@@ -41,4 +46,38 @@ public class LoginWnd : WindowRoot
         }
     }
 
+    /// <summary>
+    /// 点击进入游戏
+    /// </summary>
+    void ClickEnterBtn()
+    {
+        audioSvc.PlayUIAudio(Constants.UILoginBtn);
+
+        string acct=iptAcct.text;
+        string pass=iptPass.text;
+
+        if (acct != "" && pass != "")
+        {
+            PlayerPrefs.SetString("Acct",acct);
+            PlayerPrefs.SetString("Pass",pass);
+       LoginSys.Instance.RspLogin();
+
+        }
+        else
+        {
+            GameRoot.AddTips("账号或密码为空");
+        }
+        //新客户
+
+        //老客户
+ 
+    }
+    /// <summary>
+    /// 点击公告
+    /// </summary>
+    void ClickNoticeBtn()
+    {
+        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        GameRoot.AddTips("公告功能还在开发中");
+    }
 }

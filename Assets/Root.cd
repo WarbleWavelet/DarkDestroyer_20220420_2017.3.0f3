@@ -10,7 +10,7 @@
   <Class Name="LoginWnd" Collapsed="true">
     <Position X="4.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAgACAAAAAAAAECAIAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACAgACAAAAAAAAECAIAAAAEAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Assets\Scripts\UIWindow\LoginWnd.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,7 +24,7 @@
   <Class Name="LoginSys" Collapsed="true">
     <Position X="8.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAEQAAAAAAAAAAAAEQAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAAEQAACAAAAAAAAAEQAAAAAAAAgA=</HashCode>
       <FileName>Assets\Scripts\System\LoginSys.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -38,14 +38,14 @@
   <Class Name="Constants" Collapsed="true">
     <Position X="5.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAAAAAIAAAAAAQAAAAAAAQAAAAAAAAAAAAAIA=</HashCode>
       <FileName>Assets\Scripts\Common\Constants.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameRoot" Collapsed="true">
     <Position X="11.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAQAAAQAACAAAAAEA=</HashCode>
+      <HashCode>AAAgAAAAACAAAAAAAAAACAAAAAAAQAAAQAACAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\GameRoot.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -59,8 +59,15 @@
   <Class Name="DynamicWnd" Collapsed="true">
     <Position X="3.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>BAQgAAAAEAAAAAAAgAEAgAAAAAAAAAAAAAACAEAAAAA=</HashCode>
       <FileName>Assets\Scripts\UIWindow\DynamicWnd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreateWnd" Collapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIWindow\CreateWnd.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

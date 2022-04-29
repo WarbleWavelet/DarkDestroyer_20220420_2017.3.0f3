@@ -12,6 +12,7 @@ public class LoginSys : SystemRoot
 {
 
     public LoginWnd loginWnd;
+    public CreateWnd createWnd;
 
     public static LoginSys Instance;
 
@@ -22,7 +23,7 @@ public class LoginSys : SystemRoot
     {
         loginWnd = transform.Find("Canvas/LoginWnd").GetComponent<LoginWnd>();
     }
-   public override void InitSys()
+    public override void InitSys()
     {
         base.InitSys();
         Instance = this;
@@ -35,16 +36,11 @@ public class LoginSys : SystemRoot
     public void EnterLogin()
     {
 
-        resSvc.AsyncLoadScene(Constants.sceneLogin, () =>{ OpenLoginWnd(); });
-        GameRoot.AddTips("注");
-        GameRoot.AddTips("注册");
-        GameRoot.AddTips("注册系");
-        GameRoot.AddTips("注册系统");
-        GameRoot.AddTips("注册系统加");
-        GameRoot.AddTips("注册系统加载");
-        GameRoot.AddTips("注册系统加载完");
-        GameRoot.AddTips("注册系统加载完成");
+        resSvc.AsyncLoadScene(Constants.sceneLogin, () => { OpenLoginWnd(); });
+
+        TestAddTips();
     }
+
     /// <summary>
     /// 打开登录窗口
     /// </summary>
@@ -53,5 +49,25 @@ public class LoginSys : SystemRoot
         loginWnd.SetWndState();
         
         audioSvc.PlayBg (Constants.BGLogin);
+    }
+
+    /// <summary>
+    /// 登陆成功的回调
+    /// </summary>
+    public void RspLogin()
+    { 
+        createWnd.SetWndState ();
+        loginWnd.SetWndState(false);
+    }
+
+    /// <summary>
+    /// 测试AddTips
+    /// </summary>
+    void TestAddTips()
+    {
+        GameRoot.AddTips("注");
+        GameRoot.AddTips("注册");
+        GameRoot.AddTips("注册系");
+        GameRoot.AddTips("注册系统");
     }
 }

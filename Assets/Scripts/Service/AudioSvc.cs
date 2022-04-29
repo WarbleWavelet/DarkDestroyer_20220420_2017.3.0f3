@@ -48,6 +48,10 @@ public class AudioSvc : MonoBehaviour
             uiAudio.clip = audio;
             uiAudio.Play();
         }
+        else//重复点击
+        {
+            uiAudio.Play();
+        }
     }
 
     void JustForSee()

@@ -55,6 +55,10 @@ public class GameRoot : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 桌面消息
+    /// </summary>
+    /// <param name="tips"></param>
     public static void AddTips(string tips)
     {
        Instance.dynamicWnd.AddTips(tips);

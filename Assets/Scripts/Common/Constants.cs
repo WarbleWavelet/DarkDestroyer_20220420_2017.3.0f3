@@ -12,4 +12,6 @@ public class Constants
 {
     public const string sceneLogin = "SceneLogin";
     public const string BGLogin = "bgLogin";
+    public const string UILoginBtn = "uiLoginBtn";
+    public const string UIClickBtn = "uiClickBtn";
 }
