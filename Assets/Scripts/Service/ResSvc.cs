@@ -9,6 +9,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +21,10 @@ public class ResSvc : MonoBehaviour
 
     Dictionary<string, AudioClip> adDict = new Dictionary<string, AudioClip>();
 
+
+    public List<string> surnameLst= new List<string>();
+    public List<string> manLst= new List<string>();
+    public List<string> womanLst= new List<string>();
     void Update()
     {
         if (prgCB != null)
@@ -37,8 +42,11 @@ public class ResSvc : MonoBehaviour
     public void InitSvc()
     {
         Instance = this;
+        InitRDNameCfgs();
         Debug.Log("Init Res");
     }
+
+
 
 
     /// <summary>
@@ -96,5 +104,90 @@ public class ResSvc : MonoBehaviour
         return au;
     }
 
+    /// <summary>
+    /// 初始化随机名字的配置文件
+    /// </summary>
+    /// <exception cref="NotImplementedException"></exception>
+    private void InitRDNameCfgs()
+    {
+        TextAsset xml = Resources.Load<TextAsset>(PathDefine.RDNameCfg);
+        XmlNodeList nodLst = GetListFromTextAsset(xml);
+        if (nodLst != null)
+        {
+            for (int i = 0; i < nodLst.Count; i++)
+            {
+                XmlElement ele = nodLst[i] as XmlElement;
 
+                if (ele.GetAttributeNode("ID") == null) continue;
+
+                int ID = Convert.ToInt32(ele.GetAttributeNode("ID").InnerText);
+                foreach (XmlElement e in nodLst[i].ChildNodes)
+                {
+                    switch (e.Name)
+                    {
+                        case "surname":
+                            {
+                                surnameLst.Add(e.InnerText);
+                            }
+                            break;
+                        case "man":
+                            {
+                                manLst.Add(e.InnerText);
+                            }
+                            break;
+                        case "woman":
+                            {
+                                womanLst.Add(e.InnerText);
+                            }
+                            break;
+                        default:
+                            {
+
+                            }
+                            break;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+
+    XmlNodeList GetListFromTextAsset(TextAsset xml)
+    {
+        if (!xml)
+        {
+            Debug.Log("xml file:" + PathDefine.RDNameCfg + "not exist");
+            return null;
+        }
+        else
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(xml.text);
+
+            XmlNodeList nodLst = doc.SelectSingleNode("root").ChildNodes;
+
+
+            return nodLst;
+          
+        }
+    }
+
+
+    public string GetRDName(bool man=true)
+    {
+        string rdName = surnameLst[PETools.RDInt(0, surnameLst.Count - 1)];
+        if (man)
+        {
+            rdName += manLst[PETools.RDInt(0, manLst.Count - 1)];
+        }
+        else
+        {
+            rdName += womanLst[PETools.RDInt(0, womanLst.Count - 1)];
+        }
+
+        return rdName;
+    }
 }

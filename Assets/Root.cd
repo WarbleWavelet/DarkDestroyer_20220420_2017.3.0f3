@@ -10,7 +10,7 @@
   <Class Name="LoginWnd" Collapsed="true">
     <Position X="4.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAgACAAAAAAAAECAIAAAAEAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAACAgACAAAAQAAAECAIAAAAEAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Assets\Scripts\UIWindow\LoginWnd.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,19 +24,19 @@
   <Class Name="LoginSys" Collapsed="true">
     <Position X="8.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAEQAACAAAAAAAAAEQAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAAEQAACAAAAAAgAAEQAAAAAAAAgA=</HashCode>
       <FileName>Assets\Scripts\System\LoginSys.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ResSvc" Collapsed="true">
     <Position X="6.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAIgAAAAAAAAAAAAAAACAAAAAAAAQAAEAAAACAA=</HashCode>
+      <HashCode>AAQEAAIgAAAQAAAAAAAAAAACAAAAAAAQQAAEAAQACAE=</HashCode>
       <FileName>Assets\Scripts\Service\ResSvc.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Constants" Collapsed="true">
-    <Position X="5.5" Y="0.75" Width="1.5" />
+    <Position X="10.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAAAQAAAAAAAQAAAAAAAAAAAAAIA=</HashCode>
       <FileName>Assets\Scripts\Common\Constants.cs</FileName>
@@ -68,6 +68,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\UIWindow\CreateWnd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PathDefine" Collapsed="true">
+    <Position X="10.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Common\PathDefine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

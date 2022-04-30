@@ -113,6 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &46696998 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114034224093852338, guid: 0833f21d00de93641a89c1b637379f71,
+    type: 2}
+  m_PrefabInternal: {fileID: 1191069269}
+  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!224 &102460130 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224662761292447554, guid: 0833f21d00de93641a89c1b637379f71,
@@ -222,6 +228,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc1fbf77f4b6d2545b191027a079df07, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &309678130 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114064457718579202, guid: 0833f21d00de93641a89c1b637379f71,
+    type: 2}
+  m_PrefabInternal: {fileID: 1191069269}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &355757249
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resSvc: {fileID: 1332992442}
   audioSvc: {fileID: 1332992445}
+  iptName: {fileID: 46696998}
+  btnRand: {fileID: 309678130}
 --- !u!114 &1263393557 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114144403477703086, guid: 901cbd01575f5ac4081fd4593eb7c9b9,
@@ -1024,6 +1038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e567ca492f5ebcd409ebe2e19447cf0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surnameLst: []
+  manLst: []
+  womanLst: []
 --- !u!114 &1332992443
 MonoBehaviour:
   m_ObjectHideFlags: 0
